@@ -1,0 +1,167 @@
+/* PROF NOTE: We need to declare the fonts so they
+              are visible on other peoples computers */
+
+@font-face {
+  font-family: BloodCrow;
+  src: url(bloodcrow.ttf);
+}
+
+@font-face {
+  font-family: RoyalPain;
+  src: url(ROYALP.TTF);
+}
+
+* {
+  box-sizing: border-box; /* Fixes box-sizing to prevent extra scrolling */
+}
+
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+/*  margin-right:50px;*/
+}
+
+#left-side {
+/*  flex: 1;
+  background-color: #707070;
+  height: 100vh;*/
+  position: relative;
+
+/*  background-color: #707070;*/
+  height: 100vh;
+  flex-grow: 0.80; /* To let the left side take up all available space */
+  /* PROF NOTE: Using background image instead of an IMG tag */
+  background-image: url('Washington Park.jpg');
+  background-size: cover;
+  background-position: center center;
+  padding: 20px;
+}
+
+#left-side button{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  margin-top:320px;
+  color: white;
+  background-color: transparent;
+  transform: translateY(-50%);
+}
+
+/*#left-side button2{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  right: -25px;
+  /*left: 25px;*/
+ /* top: 50%;
+  margin-top:320px;
+  transform: translate(-50%);
+}*/
+
+#left-side button[type="button2"] {
+  right: 40px;
+  left: 1220px;
+}
+
+#left-side h1{
+  text-align: center;
+  z-index:1;
+}
+
+
+
+#left-side p{
+  font-family: 'Royal Pain', sans-serif;
+  font-size: 25px;
+  color:white;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* Hide vertical scrollbar */
+#left-side::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: #F5F5F5;
+}
+#left-side::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+#left-side::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+#right-side {
+  /*flex: 0.55;*/ 
+  /*background-color: #888888;
+  height: 100vh;*/
+  min-width: 250px; /* You can set a fixed width for your navigation here */
+  display: flex;
+  flex-direction: column;
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  text-align: center;*/
+  background-color: #888888;
+  height: 100vh; 
+  padding: 20px;
+  text-align: center;
+}
+
+#right-side ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#right-side h1 {
+  font-family: 'BloodCrow', sans-serif;
+/*  padding-left: 65px;*/
+  padding-bottom: 25px;
+  font-size:50px;
+  color:white;
+}
+
+#right-side li {
+  font-family: 'RoyalPain', sans-serif;
+/*  padding-left: 80px;*/
+/*  padding-top: 50x;*/
+  font-size:30px;
+  margin-bottom: 25px;
+}
+
+/* PROF NOTE: Coloring the navigation links */
+#right-side a, #right-side a:visited {
+  color: white;
+}
+
+#right-side a:hover {
+  color: #aa0000;
+}
+
+.alone {
+/*  position: absolute;*/
+/*  top: 25%;*/
+/*  color: #fff;*/
+/*  padding: 20px;*/
+
+  font-family: 'BloodCrow', sans-serif;
+  padding-left: 150px;
+/*  padding-bottom: 50px;*/
+  font-size:50px;
+  color:white;
+}
+
